@@ -51,6 +51,12 @@ buck-out/
 # vscode
 .vscode
 
+# Pod
+ios/Pods
+ios/Podfile.lock
+
+package-lock.json
+
 */fastlane/report.xml
 */fastlane/Preview.html
 */fastlane/screenshots
