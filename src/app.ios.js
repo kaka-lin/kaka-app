@@ -2,11 +2,12 @@ import { AppRegistry } from 'react-native';
 import { StackNavigator, TabNavigator } from 'react-navigation';
 
 import Home from './Home';
-import Home2 from './Home2';
+import Test from './test';
+import ViewPhotos from './ViewPhotos';
 
 const MainHomeNavigator = TabNavigator({
   Home1: { screen: Home },
-  Home2: { screen: Home2 },
+  Home2: { screen: Test },
 });
 
 MainHomeNavigator.navigationOptions = {
@@ -15,7 +16,7 @@ MainHomeNavigator.navigationOptions = {
 
 const App = StackNavigator({
   Home: { screen: MainHomeNavigator},
-  //Profile: { screen: ViewPhotos},
+  Profile: { screen: ViewPhotos},
 });
 
 AppRegistry.registerComponent('kakaApp', () => App);

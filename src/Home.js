@@ -1,67 +1,54 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, Image } from 'react-native';
-import { TfImageRecognition } from 'react-native-tensorflow';
+import { StyleSheet, Text, View, Image, TouchableHighlight, CameraRoll } from 'react-native';
 
-export default class Test extends Component {
+import ViewPhotos from './ViewPhotos';
 
-    constructor() {
-      super()
-      this.image = require('./assets/dumbbell.jpg');
-      this.state = {result: ""}
-    }
-
-    componentDidMount() {
-      this.recognizeImage()
-    }
-
-    async recognizeImage() {
-
-      try {
-        const tfImageRecognition = new TfImageRecognition({
-          model:require('./assets/tensorflow_inception_graph.pb'),
-          labels: require('./assets/tensorflow_labels.txt')
-        })
-
-        const results = await tfImageRecognition.recognize({
-          image: this.image
-        })
-
-        const resultText = `Name: ${results[0].name} - Confidence: ${results[0].confidence}`
-        this.setState({result: resultText})
-      } catch(err) {
-        alert(err)
-      }
-    }
-
-    render() {
-      return (
-        <View style={styles.container}>
-          <Text style={styles.welcome}>
-            Welcome to React Native!
-          </Text>
-            <Image source={this.image} style={styles.image} />
-          <Text style={styles.results}>
-            {this.state.result}
-          </Text>
-        </View>
-      );
-    }
+export default class Home extends Component<{}> {
+  state = {
+    showPhoto: false,
+    photoArray: []
   }
 
-  const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      justifyContent: 'center',
-      alignItems: 'center',
-      backgroundColor: '#F5FCFF',
-    },
-    results: {
-      textAlign: 'center',
-      color: '#333333',
-      marginBottom: 5,
-    },
-    image: {
-      width: 150,
-      height: 100
-    },
-  });
+  getPhotos() {
+    const { navigate } = this.props.navigation
+    CameraRoll.getPhotos({
+      first: 10,
+      assetType: 'All',
+    })
+    .then(r => {
+        let photoArray = r.edges;
+        this.setState({
+          showPhoto: true,
+          photoArray: photoArray
+        })
+    })
+    .then(() => navigate('Profile', {photoArray: this.state.photoArray}))
+  }
+
+  render() {
+    return (
+      <View style={styles.container}>
+        <Text>Hello, Kaka App!</Text>
+        <TouchableHighlight
+          style={styles.button}
+          onPress={() => this.getPhotos()}
+        >
+          <Text> View Photos </Text>
+        </TouchableHighlight>
+      </View>
+    );
+  }
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  button: {
+    alignItems: 'center',
+    backgroundColor: '#DDDDDD',
+    padding: 10
+  },
+});
