@@ -40,6 +40,7 @@
 		C121CCA91FE0D1880066AE9C /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		C1727F951FE248FE007BD667 /* libRCTCameraRoll.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1727F751FE248DE007BD667 /* libRCTCameraRoll.a */; };
 		C1727FE11FE24BF2007BD667 /* libRCTCamera.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1727FE01FE24BDA007BD667 /* libRCTCamera.a */; };
+		C17DBB621FE518A500E649D4 /* MyObjcClass.m in Sources */ = {isa = PBXBuildFile; fileRef = C17DBB611FE518A500E649D4 /* MyObjcClass.m */; };
 		E7A224E34C78D752514AC9C8 /* libPods-kakaApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 454D8B9B0A97462C39BCD59B /* libPods-kakaApp.a */; };
 /* End PBXBuildFile section */
 
@@ -357,6 +358,8 @@
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
 		C1727F6B1FE248DD007BD667 /* RCTCameraRoll.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTCameraRoll.xcodeproj; path = "../node_modules/react-native/Libraries/CameraRoll/RCTCameraRoll.xcodeproj"; sourceTree = "<group>"; };
 		C1727FDB1FE24BDA007BD667 /* RCTCamera.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTCamera.xcodeproj; path = "../node_modules/react-native-camera/ios/RCTCamera.xcodeproj"; sourceTree = "<group>"; };
+		C17DBB601FE518A500E649D4 /* MyObjcClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MyObjcClass.h; path = kakaApp/MyObjcClass.h; sourceTree = "<group>"; };
+		C17DBB611FE518A500E649D4 /* MyObjcClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MyObjcClass.m; path = kakaApp/MyObjcClass.m; sourceTree = "<group>"; };
 		C5E27411E0054466B8DBCDFC /* RNTensorflow.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNTensorflow.xcodeproj; path = "../node_modules/react-native-tensorflow/ios/RNTensorflow.xcodeproj"; sourceTree = "<group>"; };
 		E8F843FA1E354B91BE615702 /* libRNTensorflow.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNTensorflow.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -507,6 +510,8 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				C17DBB601FE518A500E649D4 /* MyObjcClass.h */,
+				C17DBB611FE518A500E649D4 /* MyObjcClass.m */,
 			);
 			name = kakaApp;
 			sourceTree = "<group>";
@@ -1250,6 +1255,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C17DBB621FE518A500E649D4 /* MyObjcClass.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
