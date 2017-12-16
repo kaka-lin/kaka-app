@@ -1,61 +1,52 @@
 import React, { Component } from 'react';
-import { Image, View, ListView, StyleSheet, Text, TouchableHighlight, ScrollView } from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableHighlight, CameraRoll } from 'react-native';
 
-export default class ViewPhotos extends Component {
+export default class ViewPhotos extends Component<{}> {
   state = {
-    ds: new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2}),
-    showSelectedPhoto: false,
-    uri: ''
+    showPhoto: false,
+    photoArray: []
   }
 
-  renderRow(rowData) {
-    const { uri } = rowData.node.image
-    return (
-      <Image
-        source={{uri: rowData.node.image.uri}}
-        style={styles.image}
-      />
-    )
+  getPhotos() {
+    const { navigate } = this.props.navigation
+    CameraRoll.getPhotos({
+      first: 10,
+      assetType: 'All',
+    })
+    .then(r => {
+        let photoArray = r.edges;
+        this.setState({
+          showPhoto: true,
+          photoArray: photoArray
+        })
+    })
+    .then(() => navigate('Profile', {photoArray: this.state.photoArray}))
   }
 
   render() {
-    const { showSelectedPhoto, uri } = this.state;
-
-    if (showSelectedPhoto) {
-      return (
-        <SelectedPhoto uri={uri} />
-      )
-    }
-
     return (
-      <View style={{ flex: 1}}>
-        <View style={{ alignItems: 'center', marginTop: 15}}>
-          <Text style={{ fontSize: 20, fontWeight: '600' }}> Pick A Photo </Text>
-        </View>
-        <ListView
-          contentContainerStyle={StyleSheet.list}
-          dataSource={this.state.ds.cloneWithRows(this.props.navigation.state.params.photoArray)}
-          renderRow={(rowData) => this.renderRow(rowData)}
-          enableEmptySections={true}
-        />
+      <View style={styles.container}>
+        <Text>Hello, Kaka App!</Text>
+        <TouchableHighlight
+          style={styles.button}
+          onPress={() => this.getPhotos()}
+        >
+          <Text> View Photos </Text>
+        </TouchableHighlight>
       </View>
-    )
+    );
   }
 }
 
 const styles = StyleSheet.create({
-  list: {
-    flexDirection: 'row',
-    flexWrap: 'wrap'
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center'
   },
-
-  image: {
-    width: 110,
-    height: 120,
-    marginLeft: 10,
-    marginTop: 10,
-    borderRadius: 5,
-    borderWidth: 1,
-    borderColor: '#979797'
-  }
-})
+  button: {
+    alignItems: 'center',
+    backgroundColor: '#DDDDDD',
+    padding: 10
+  },
+});
