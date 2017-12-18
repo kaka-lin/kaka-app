@@ -11,13 +11,15 @@
 @implementation MyObjcClass
 
 RCT_EXPORT_MODULE()
-- (NSDictionary *)constantsToExport {
-  return @{@"greeting": @"Welcome to the kaka\n Native Modules!"};
+- (NSDictionary *)constantsToExport
+{
+    return @{@"greeting": @"Welcome to the kaka\n Native Modules!"};
 }
 
-RCT_EXPORT_METHOD(squareMe: (NSString *)number:(RCTResponseSenderBlock)callback) {
-  int num = [number intValue];
-  callback(@[[NSNull null], [NSNumber numberWithInt:(num * num)]]);
+RCT_EXPORT_METHOD(squareMe: (NSString *)number:(RCTResponseSenderBlock)callback)
+{
+    int num = [number intValue];
+    callback(@[[NSNull null], [NSNumber numberWithInt:(num * num)]]);
 }
 
 

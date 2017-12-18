@@ -6,11 +6,13 @@ import ShowPhotos from './ShowPhotos';
 import Camera from './Camera';
 import Test from './test';
 import ObjectiveC from './ObjectiveC';
+import Calendar from './CalendarManager';
 
 const MainHomeNavigator = TabNavigator({
   ViewPhotos: { screen: ViewPhotos },
   Camera: { screen: Camera },
   ObjectiveC: { screen: ObjectiveC},
+  Calendar: { screen: Calendar},
   //Test: { screen: Test },
 });
 
