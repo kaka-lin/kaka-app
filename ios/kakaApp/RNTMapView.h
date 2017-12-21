@@ -10,7 +10,7 @@
 
 #import <React/RCTComponent.h>
 
-@interface KakaView : MKMapView
+@interface RNTMapView : MKMapView
 
 @property (nonatomic, copy) RCTBubblingEventBlock onRegionChange;
 

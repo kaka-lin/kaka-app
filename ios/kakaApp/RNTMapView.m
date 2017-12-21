@@ -6,8 +6,8 @@
 //  Copyright © 2017年 Facebook. All rights reserved.
 //
 
-#import "KakaView.h"
+#import "RNTMApView.h"
 
-@implementation KakaView
+@implementation RNTMapView
 
 @end

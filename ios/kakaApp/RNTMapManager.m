@@ -6,11 +6,11 @@
 //  Copyright © 2017年 Facebook. All rights reserved.
 //
 
-#import "KakaView.h"
-#import "KakaViewManager.h"
+#import "RNTMapView.h"
+#import "RNTMapManager.h"
 #import "RCTConvert+Mapkit.m"
 
-@implementation KakaViewManager
+@implementation RNTMapManager
 
 RCT_EXPORT_MODULE()
 
@@ -25,14 +25,14 @@ RCT_CUSTOM_VIEW_PROPERTY(region, MKCoordinateRegion, MKMapView)
 
 - (UIView *)view
 {
-  KakaView *map = [KakaView new];
+  RNTMapView *map = [RNTMapView new];
   map.delegate = self;
   return map;
 }
 
 #pragma mark MKMapViewDelegate
 
-- (void)mapView:(KakaView *)mapView regionDidChangeAnimated:(BOOL)animated
+- (void)mapView:(RNTMapView *)mapView regionDidChangeAnimated:(BOOL)animated
 {
   if (!mapView.onRegionChange) {
     return;

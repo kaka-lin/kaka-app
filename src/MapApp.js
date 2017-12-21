@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import NativeUI from './NativeUI';
+import MapView from './MapView';
 
-export default class ShowNativeUI extends Component {
+export default class MapApp extends Component {
   onRegionChange(event) {
     console.log(event)
   }
@@ -13,7 +13,7 @@ export default class ShowNativeUI extends Component {
       longitudeDelta: 0.1,
     };
     return (
-      <NativeUI
+      <MapView
         region={region}
         zoomEnabled={false}
         onRegionChange={this.onRegionChange}

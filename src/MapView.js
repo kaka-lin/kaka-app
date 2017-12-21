@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 //module.exports = requireNativeComponent('RCTKakaView', null);
 //var KakaView = requireNativeComponent('KakaView', NativeUI);
 
-class NativeUI extends Component {
+class MapView extends Component {
   _onRegionChange = (event) => {
     if (!this.props.onRegionChange) {
       return;
@@ -18,7 +18,7 @@ class NativeUI extends Component {
 
   render() {
     return (
-      <KakaView
+      <RNTMap
         {...this.props}
         onRegionChange={this._onRegionChange}
       />
@@ -26,7 +26,7 @@ class NativeUI extends Component {
   }
 }
 
-NativeUI.propTypes = {
+MapView.propTypes = {
   /**
    * A Boolean value that determines whether the user may use pinch
    * gestures to zoom in and out of the map.
@@ -61,6 +61,6 @@ NativeUI.propTypes = {
   onRegionChange: PropTypes.func,
 };
 
-var KakaView = requireNativeComponent('KakaView', NativeUI);
+var RNTMap  = requireNativeComponent('RNTMap', MapView);
 
-module.exports = NativeUI;
+module.exports = MapView;

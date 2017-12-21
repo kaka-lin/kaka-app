@@ -9,6 +9,6 @@
 #import <MapKit/MapKit.h>
 #import <React/RCTViewManager.h>
 
-@interface KakaViewManager : RCTViewManager <MKMapViewDelegate>
+@interface RNTMapManager : RCTViewManager <MKMapViewDelegate>
 
 @end
