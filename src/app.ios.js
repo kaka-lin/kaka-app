@@ -7,12 +7,14 @@ import Camera from './Camera';
 import Test from './test';
 import ObjectiveC from './ObjectiveC';
 import Calendar from './CalendarManager';
+import KakaView from './KakaView';
 
 const MainHomeNavigator = TabNavigator({
   ViewPhotos: { screen: ViewPhotos },
   Camera: { screen: Camera },
   ObjectiveC: { screen: ObjectiveC},
   Calendar: { screen: Calendar},
+  NativeUI: {screen: KakaView},
   //Test: { screen: Test },
 });
 

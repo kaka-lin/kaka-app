@@ -42,6 +42,7 @@
 		C1727FE11FE24BF2007BD667 /* libRCTCamera.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1727FE01FE24BDA007BD667 /* libRCTCamera.a */; };
 		C17DBB621FE518A500E649D4 /* MyObjcClass.m in Sources */ = {isa = PBXBuildFile; fileRef = C17DBB611FE518A500E649D4 /* MyObjcClass.m */; };
 		C17DBB971FE5452F00E649D4 /* CalendarManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C17DBB961FE5452F00E649D4 /* CalendarManager.m */; };
+		C1961B911FEB7DE300DF82AE /* KakaViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C1961B901FEB7DE300DF82AE /* KakaViewManager.m */; };
 		E7A224E34C78D752514AC9C8 /* libPods-kakaApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 454D8B9B0A97462C39BCD59B /* libPods-kakaApp.a */; };
 /* End PBXBuildFile section */
 
@@ -363,6 +364,8 @@
 		C17DBB611FE518A500E649D4 /* MyObjcClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MyObjcClass.m; path = kakaApp/MyObjcClass.m; sourceTree = "<group>"; };
 		C17DBB951FE5452F00E649D4 /* CalendarManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CalendarManager.h; path = kakaApp/CalendarManager.h; sourceTree = "<group>"; };
 		C17DBB961FE5452F00E649D4 /* CalendarManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CalendarManager.m; path = kakaApp/CalendarManager.m; sourceTree = "<group>"; };
+		C1961B8F1FEB7DE300DF82AE /* KakaViewManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = KakaViewManager.h; path = kakaApp/KakaViewManager.h; sourceTree = "<group>"; };
+		C1961B901FEB7DE300DF82AE /* KakaViewManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = KakaViewManager.m; path = kakaApp/KakaViewManager.m; sourceTree = "<group>"; };
 		C5E27411E0054466B8DBCDFC /* RNTensorflow.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNTensorflow.xcodeproj; path = "../node_modules/react-native-tensorflow/ios/RNTensorflow.xcodeproj"; sourceTree = "<group>"; };
 		E8F843FA1E354B91BE615702 /* libRNTensorflow.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNTensorflow.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -517,6 +520,8 @@
 				C17DBB611FE518A500E649D4 /* MyObjcClass.m */,
 				C17DBB951FE5452F00E649D4 /* CalendarManager.h */,
 				C17DBB961FE5452F00E649D4 /* CalendarManager.m */,
+				C1961B8F1FEB7DE300DF82AE /* KakaViewManager.h */,
+				C1961B901FEB7DE300DF82AE /* KakaViewManager.m */,
 			);
 			name = kakaApp;
 			sourceTree = "<group>";
@@ -1260,6 +1265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1961B911FEB7DE300DF82AE /* KakaViewManager.m in Sources */,
 				C17DBB621FE518A500E649D4 /* MyObjcClass.m in Sources */,
 				C17DBB971FE5452F00E649D4 /* CalendarManager.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
