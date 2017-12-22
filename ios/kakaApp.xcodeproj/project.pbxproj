@@ -45,6 +45,8 @@
 		C1961B911FEB7DE300DF82AE /* RNTMapManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C1961B901FEB7DE300DF82AE /* RNTMapManager.m */; };
 		C1DBE6341FEB94D80049216E /* RCTConvert+Mapkit.m in Sources */ = {isa = PBXBuildFile; fileRef = C1DBE6331FEB94D80049216E /* RCTConvert+Mapkit.m */; };
 		C1DBE65D1FEB97CF0049216E /* RNTMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = C1DBE65C1FEB97CF0049216E /* RNTMapView.m */; };
+		C1DBE6601FECA1380049216E /* KakaCameraManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C1DBE65F1FECA1380049216E /* KakaCameraManager.m */; };
+		C1DBE6631FECA72A0049216E /* KakaCameraView.m in Sources */ = {isa = PBXBuildFile; fileRef = C1DBE6621FECA72A0049216E /* KakaCameraView.m */; };
 		E7A224E34C78D752514AC9C8 /* libPods-kakaApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 454D8B9B0A97462C39BCD59B /* libPods-kakaApp.a */; };
 /* End PBXBuildFile section */
 
@@ -371,6 +373,10 @@
 		C1DBE6331FEB94D80049216E /* RCTConvert+Mapkit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "RCTConvert+Mapkit.m"; path = "kakaApp/RCTConvert+Mapkit.m"; sourceTree = "<group>"; };
 		C1DBE65B1FEB97CF0049216E /* RNTMapView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RNTMapView.h; path = kakaApp/RNTMapView.h; sourceTree = "<group>"; };
 		C1DBE65C1FEB97CF0049216E /* RNTMapView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = RNTMapView.m; path = kakaApp/RNTMapView.m; sourceTree = "<group>"; };
+		C1DBE65E1FECA1380049216E /* KakaCameraManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = KakaCameraManager.h; path = kakaApp/KakaCameraManager.h; sourceTree = "<group>"; };
+		C1DBE65F1FECA1380049216E /* KakaCameraManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = KakaCameraManager.m; path = kakaApp/KakaCameraManager.m; sourceTree = "<group>"; };
+		C1DBE6611FECA72A0049216E /* KakaCameraView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = KakaCameraView.h; path = kakaApp/KakaCameraView.h; sourceTree = "<group>"; };
+		C1DBE6621FECA72A0049216E /* KakaCameraView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = KakaCameraView.m; path = kakaApp/KakaCameraView.m; sourceTree = "<group>"; };
 		C5E27411E0054466B8DBCDFC /* RNTensorflow.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNTensorflow.xcodeproj; path = "../node_modules/react-native-tensorflow/ios/RNTensorflow.xcodeproj"; sourceTree = "<group>"; };
 		E8F843FA1E354B91BE615702 /* libRNTensorflow.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNTensorflow.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -530,6 +536,10 @@
 				C1DBE6331FEB94D80049216E /* RCTConvert+Mapkit.m */,
 				C1DBE65B1FEB97CF0049216E /* RNTMapView.h */,
 				C1DBE65C1FEB97CF0049216E /* RNTMapView.m */,
+				C1DBE65E1FECA1380049216E /* KakaCameraManager.h */,
+				C1DBE65F1FECA1380049216E /* KakaCameraManager.m */,
+				C1DBE6611FECA72A0049216E /* KakaCameraView.h */,
+				C1DBE6621FECA72A0049216E /* KakaCameraView.m */,
 			);
 			name = kakaApp;
 			sourceTree = "<group>";
@@ -1275,10 +1285,12 @@
 			files = (
 				C1961B911FEB7DE300DF82AE /* RNTMapManager.m in Sources */,
 				C17DBB621FE518A500E649D4 /* MyObjcClass.m in Sources */,
+				C1DBE6601FECA1380049216E /* KakaCameraManager.m in Sources */,
 				C17DBB971FE5452F00E649D4 /* CalendarManager.m in Sources */,
 				C1DBE6341FEB94D80049216E /* RCTConvert+Mapkit.m in Sources */,
 				C1DBE65D1FEB97CF0049216E /* RNTMapView.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				C1DBE6631FECA72A0049216E /* KakaCameraView.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

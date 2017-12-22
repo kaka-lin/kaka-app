@@ -2,10 +2,6 @@ import React, { Component } from 'react';
 import { requireNativeComponent, View } from 'react-native';
 import PropTypes from 'prop-types';
 
-// requireNativeComponent automatically resolves 'KakaView' to 'KakaViewManager'
-//module.exports = requireNativeComponent('RCTKakaView', null);
-//var KakaView = requireNativeComponent('KakaView', NativeUI);
-
 class MapView extends Component {
   _onRegionChange = (event) => {
     if (!this.props.onRegionChange) {
@@ -13,6 +9,7 @@ class MapView extends Component {
     }
 
     // process raw evvent
+    // 所有callback方法都需要通過nativeEvent獲取返回值
     this.props.onRegionChange(event.nativeEvent);
   }
 
@@ -61,6 +58,12 @@ MapView.propTypes = {
   onRegionChange: PropTypes.func,
 };
 
+// requireNativeComponent automatically resolves 'RNTMap' to 'RNTMapManager'
 var RNTMap  = requireNativeComponent('RNTMap', MapView);
+/*
+ ** 注意我們現在把requireNativeComponent的第二參數
+ ** 從null變成了用於封裝的組件MapView。
+ ** 這使得React Native的底層框架可以檢查原生屬性和包裝類的屬性是否一致。
+ */
 
 module.exports = MapView;

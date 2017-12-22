@@ -8,14 +8,16 @@ import Test from './test';
 import ObjectiveC from './ObjectiveC';
 import Calendar from './CalendarManager';
 import MapApp from './MapApp';
+import KCamera from './KakaCamera';
 
 const MainHomeNavigator = TabNavigator({
-  ViewPhotos: { screen: ViewPhotos },
+  //ViewPhotos: { screen: ViewPhotos },
   //Camera: { screen: Camera },
-  ObjectiveC: { screen: ObjectiveC},
-  Calendar: { screen: Calendar},
-  MapApp: {screen: MapApp},
+  //ObjectiveC: { screen: ObjectiveC},
+  //Calendar: { screen: Calendar},
+  //MapApp: {screen: MapApp},
   //Test: { screen: Test },
+  KCamera: {screen: KCamera},
 });
 
 MainHomeNavigator.navigationOptions = {
